@@ -1,0 +1,33 @@
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links{
+        display:flex;
+        flex-direction: column;
+        position:fixed;
+        top: 0;
+        right: 20px;
+
+        border-radius:10px;
+        background-color: #fdfaf3;
+        transition: all 0.3s ease-in-out;
+        padding:20px;
+        z-index: 1000;
+    }
+    .mobile-links-down{
+        top:80px;
+        transition:all 0.3s ease-in-out;
+    }
+    .mobile-links-up{
+        top:-100%;
+        transition:all 0.3s ease-in-out;
+    }
+
+    .mobile{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
