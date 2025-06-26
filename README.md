@@ -23,23 +23,23 @@ To improve user experience, toast notifications are used throughout the app to p
 ### 1. clone the repository
 
 
-git clone <your-repo-url>
-cd <your-repo-folder>
+- **git clone** <your-repo-url>
+- **cd** lia-plus-ai
 
 ### 2. Run Backend
 
-cd server
-npm install
-npm start
+- **cd** server
+- **npm install**
+- **npm start**
 
 Make sure to configure your MongoDB connection and JWT secret in a .env file inside /server.
 
 ### 3. Run Frontend
 In a new terminal:
 
-cd client
-npm install
-npm run dev
+- **cd client**
+- **npm install**
+- **npm run dev**
 
 
 ## Screenshots
