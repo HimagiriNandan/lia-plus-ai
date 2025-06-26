@@ -23,7 +23,7 @@ To improve user experience, toast notifications are used throughout the app to p
 ### 1. clone the repository
 
 
-- **git clone** <your-repo-url>
+- **git clone** https://github.com/HimagiriNandan/lia-plus-ai.git
 - **cd** lia-plus-ai
 
 ### 2. Run Backend
