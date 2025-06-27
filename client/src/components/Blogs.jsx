@@ -46,7 +46,6 @@ function Blogs() {
               key={post.id}
               className="bg-[#fdfaf4] border border-[#d6c6a8] rounded-md shadow-md p-6 relative overflow-hidden hover:shadow-lg transition-shadow duration-200 group"
             >
-              {/* Decorative pseudo border */}
               <div className="absolute  rounded-full opacity-30 "></div>
               <div className="absolute   bg-[#c5ab83] rounded-full "></div>
 
