@@ -8,7 +8,6 @@ const roleMiddleware = require('../Middleware/roleMiddleware')
 router.get('/getpost', authMiddleware, async (req, res) => {
    try {
         const posts = await Post.find().sort({ timeStamp: -1 });
-        console.log(posts);
         res.status(200).json(posts);
     } catch (err) {
         res.status(500).json({ message: "Error fetching posts", error: err.message });
@@ -19,7 +18,6 @@ router.post('/createpost', authMiddleware, roleMiddleware(), async (req, res) =>
     try{
         roleMiddleware();
         const {title, content, author} = req.body;
-        console.log("Received POST data:", req.body);
         const post = new Post({
             title,
             content,
@@ -62,7 +60,6 @@ router.delete('/deletepost/:id', authMiddleware, roleMiddleware(), async (req, r
 router.get("/getpostdata/:id",authMiddleware,async(req,res)=>{
     try{
         const { id } = req.params;
-        console.log("Received POST data:", req.body);
         const post = await Post.findById(id);
         if(!post){
             return res.status(404).json({message: "Post not found"});
@@ -78,7 +75,6 @@ router.get("/getuserpost", authMiddleware,roleMiddleware(), async (req, res) => 
   try {
     const userId = req.user.id; 
     const posts = await Post.find({ authId: userId });
-    console.log(posts);
     res.status(200).json(posts);
   } catch (err) {
     res.status(500).json({ message: "Error fetching user posts", error: err.message });

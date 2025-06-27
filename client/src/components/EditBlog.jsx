@@ -20,7 +20,7 @@ const EditBlog = () => {
         console.error("Failed to fetch post data");
       }
     } catch (error) {
-      console.error("Error fetching post:", error);
+      console.error("Error fetching post:", error.message);
     }
   };
 
@@ -83,7 +83,7 @@ const EditBlog = () => {
           className="mb-8"
         />
 
-        <Button className="w-full bg-[#8b5e3c] hover:bg-[#5a3b2a] text-white font-semibold">
+        <Button className="w-full bg-[#8b5e3c] hover:bg-[#5a3b2a] text-white font-semibold" onClick={handleUpdatePost}>
           Update Post
         </Button>
       </div>

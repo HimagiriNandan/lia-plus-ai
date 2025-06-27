@@ -13,7 +13,6 @@ function Blogs() {
         const res = await axios.get('http://localhost:5000/api/posts/getuserpost', { withCredentials: true });
         if (res.status === 200) {
           dispatch(getPosts(res.data));
-          console.log(res.data);
         }
       } catch (err) {
         console.log(err.message);
@@ -27,7 +26,7 @@ function Blogs() {
       const res = await axios.delete(`http://localhost:5000/api/posts/deletepost/${id}`, { withCredentials: true });
       if (res.status === 200) {
         dispatch(getPosts(posts.filter(post => post._id !== id)));
-        console.log("Post deleted successfully");
+        toast.success("Post deleted successfully");
       }
     } catch (err) {
       console.log(err.message);
